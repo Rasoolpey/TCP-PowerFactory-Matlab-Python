@@ -1,0 +1,9 @@
+LIBRARY   digexfun
+
+EXPORTS
+
+  RegisterFunctions   @1
+  Init                @2
+  ExchangeViaTCP0      @3
+  ExchangeViaTCP1      @4
+  GetOutputIndex      @5

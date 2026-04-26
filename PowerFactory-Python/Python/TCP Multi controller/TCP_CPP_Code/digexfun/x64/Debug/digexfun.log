@@ -1,0 +1,9 @@
+﻿  digexfun.cpp
+  userfun.cpp
+  Generating Code...
+C:\Users\em18736\Documents\Digsilent Projects\TCP Multi controller\TCP_CPP_Code\userfun.cpp(75,30): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+C:\Users\em18736\Documents\Digsilent Projects\TCP Multi controller\TCP_CPP_Code\userfun.cpp(141,9): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\em18736\Documents\Digsilent Projects\TCP Multi controller\TCP_CPP_Code\userfun.cpp(146,9): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1395,5): warning MSB8012: TargetPath(C:\Users\em18736\Documents\Digsilent Projects\TCP Multi controller\TCP_CPP_Code\x64\Debug\digexfun.dll) does not match the Linker's OutputFile property value (C:\Users\em18736\Documents\Digsilent Projects\TCP Multi controller\digexfun.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     Creating library .\Debug\digexfun.lib and object .\Debug\digexfun.exp
+  digexfun.vcxproj -> C:\Users\em18736\Documents\Digsilent Projects\TCP Multi controller\TCP_CPP_Code\x64\Debug\digexfun.dll

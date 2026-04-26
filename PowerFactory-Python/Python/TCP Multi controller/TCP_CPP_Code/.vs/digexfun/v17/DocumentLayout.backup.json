@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\em18736\\Documents\\Digsilent Projects\\TCP Multi controller\\TCP_CPP_Code\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2DED38E7-D9B3-4719-BCA8-05A44267F221}|digexfun.vcxproj|C:\\Users\\em18736\\Documents\\Digsilent Projects\\TCP Multi controller\\TCP_CPP_Code\\digexfun.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2DED38E7-D9B3-4719-BCA8-05A44267F221}|digexfun.vcxproj|solutionrelative:digexfun.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DED38E7-D9B3-4719-BCA8-05A44267F221}|digexfun.vcxproj|C:\\Users\\em18736\\Documents\\Digsilent Projects\\TCP Multi controller\\TCP_CPP_Code\\userfun.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2DED38E7-D9B3-4719-BCA8-05A44267F221}|digexfun.vcxproj|solutionrelative:userfun.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DED38E7-D9B3-4719-BCA8-05A44267F221}|digexfun.vcxproj|C:\\Users\\em18736\\Documents\\Digsilent Projects\\TCP Multi controller\\TCP_CPP_Code\\digexfun.def||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2DED38E7-D9B3-4719-BCA8-05A44267F221}|digexfun.vcxproj|solutionrelative:digexfun.def||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "digexfun.cpp",
+              "DocumentMoniker": "C:\\Users\\em18736\\Documents\\Digsilent Projects\\TCP Multi controller\\TCP_CPP_Code\\digexfun.cpp",
+              "RelativeDocumentMoniker": "digexfun.cpp",
+              "ToolTip": "C:\\Users\\em18736\\Documents\\Digsilent Projects\\TCP Multi controller\\TCP_CPP_Code\\digexfun.cpp",
+              "RelativeToolTip": "digexfun.cpp",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAHwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-04T23:10:10.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "userfun.cpp",
+              "DocumentMoniker": "C:\\Users\\em18736\\Documents\\Digsilent Projects\\TCP Multi controller\\TCP_CPP_Code\\userfun.cpp",
+              "RelativeDocumentMoniker": "userfun.cpp",
+              "ToolTip": "C:\\Users\\em18736\\Documents\\Digsilent Projects\\TCP Multi controller\\TCP_CPP_Code\\userfun.cpp",
+              "RelativeToolTip": "userfun.cpp",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAACgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-11T03:26:25.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "digexfun.def",
+              "DocumentMoniker": "C:\\Users\\em18736\\Documents\\Digsilent Projects\\TCP Multi controller\\TCP_CPP_Code\\digexfun.def",
+              "RelativeDocumentMoniker": "digexfun.def",
+              "ToolTip": "C:\\Users\\em18736\\Documents\\Digsilent Projects\\TCP Multi controller\\TCP_CPP_Code\\digexfun.def",
+              "RelativeToolTip": "digexfun.def",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001913|",
+              "WhenOpened": "2025-05-04T01:22:43.083Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

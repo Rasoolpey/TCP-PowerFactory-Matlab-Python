@@ -1,0 +1,7 @@
+﻿  digexfun.cpp
+  userfun.cpp
+  Generating Code...
+C:\Users\em18736\Documents\Digsilent Projects\DLL_TCPConnection\userfun.cpp(56,30): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+C:\Users\em18736\Documents\Digsilent Projects\DLL_TCPConnection\userfun.cpp(92,9): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     Creating library .\Release\digexfun.lib and object .\Release\digexfun.exp
+  digexfun.vcxproj -> C:\Users\em18736\Documents\Digsilent Projects\DLL_TCPConnection\x64\Release\digexfun.dll

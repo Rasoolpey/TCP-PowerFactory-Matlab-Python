@@ -1,58 +1,67 @@
-# Unified TCP Co-Simulation Framework
+# TCP Co-Simulation Bridge: Extending Simulation Tools with External Controllers
 
-This project presents one core idea:
+Power system simulators like DIgSILENT PowerFactory and MATLAB/Simulink are excellent at what they do — but they lock you inside their own controller ecosystems. If you want to run a custom optimization, a machine learning model, or any logic that the tool does not natively support, you are forced to find a workaround.
 
-Use Python as the external intelligence layer for power-system simulations, while keeping high-fidelity plant models in their native simulation tools.
+This project provides a general-purpose bridge that solves that problem.
 
-In this repository, that idea is implemented for both MATLAB/Simulink and DIgSILENT PowerFactory through TCP-based real-time data exchange.
+The idea is straightforward: expose the simulation inputs and outputs over TCP so that any external application — regardless of language or framework — can read measurements and send control signals back in real time, step by step, without breaking the simulation clock.
 
-[![DOI](https://img.shields.io/badge/DOI-10.1109%2FKPEC58008.2023.10215460-blue)](https://doi.org/10.1109/KPEC58008.2023.10215460)
+The two tools targeted here are PowerFactory and MATLAB/Simulink, but the bridge concept is the same for both.
 
-## Big Picture
+---
 
-### PowerFactory + Python
+## How It Works
 
-![PowerFactory TCP architecture](PowerFactory-Python/images/PowerFactory.svg)
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <h3>PowerFactory</h3>
+      <img src="PowerFactory-Python/images/PowerFactory.svg" alt="PowerFactory TCP bridge" />
+    </td>
+    <td align="center" width="50%">
+      <h3>MATLAB / Simulink</h3>
+      <img src="PowerFactory-Python/images/Matlab.svg" alt="MATLAB Simulink TCP bridge" />
+    </td>
+  </tr>
+</table>
 
-### MATLAB/Simulink + Python
+At every simulation timestep, measurement signals are sent from the simulator to the external application over TCP. The external application processes them, computes a response, and sends control outputs back. The simulator blocks until it receives the reply, so the two sides remain fully synchronized.
 
-![MATLAB Simulink TCP architecture](PowerFactory-Python/images/Matlab.svg)
+The external application can be written in any language. In this repository, Python is used as the implementation example.
 
-### Parallel MATLAB Instances for Faster Training
+---
 
-![Concurrent multi-instance MATLAB training](PowerFactory-Python/images/Concurrent.svg)
+## Scaling Up: Running Multiple Simulations in Parallel
 
-Multiple MATLAB instances run in parallel, each on a separate CPU/core path, and all connect to Python. This allows much faster experience collection and training than a single simulation stream.
+When the external logic involves training a model — such as a reinforcement learning agent — a single simulation is a bottleneck. The bridge supports running multiple simulator instances simultaneously, each connected through a separate communication channel.
 
-## What This Repository Demonstrates
+![Concurrent simulation workers](PowerFactory-Python/images/Concurrent.svg)
 
-- A unified communication approach (TCP) that works across different simulation ecosystems.
-- Real-time closed-loop integration of external Python logic with simulation timesteps.
-- Scalable experimentation: from classical control logic to reinforcement learning.
-- A practical pathway for researchers and engineers to prototype advanced controllers without being limited by built-in simulator controller blocks.
+Each simulation instance runs on its own CPU core, collecting experience independently. The results are fed into a shared training process, making data collection as fast as the number of available cores allows.
 
-## What I Did
+---
 
-- Designed and implemented a cross-platform co-simulation concept centered on Python TCP control.
-- Built and validated a MATLAB/Simulink + Python RL pipeline under this concept.
-- Built and validated a PowerFactory + DLL + Python synchronous controller bridge under the same concept.
-- Added concurrent MATLAB execution so training can be distributed over multiple simulation workers.
-- Structured the project so each framework can be used independently while sharing the same systems-level philosophy.
+## What This Repository Contains
 
-## Detailed Framework Documentation
+- A TCP bridge implementation for **DIgSILENT PowerFactory** using a compiled DLL external function.
+- A TCP bridge implementation for **MATLAB/Simulink** using TCP send/receive blocks.
+- A working example of the MATLAB bridge applied to reinforcement learning: a DDPG agent trained to control a Buck DC-DC converter, with multiple Simulink instances running concurrently.
 
-This README is intentionally high-level.
+The two frameworks are independent and can be used separately.
 
-For implementation details, setup, configuration, and step-by-step usage:
+---
 
-- [Matlab-Python/README.md](Matlab-Python/README.md)
-- [PowerFactory-Python/Readme.md](PowerFactory-Python/Readme.md)
+## Full Documentation
+
+- [Matlab-Python/README.md](Matlab-Python/README.md) — setup, architecture, and usage for the MATLAB/Simulink bridge and RL example.
+- [PowerFactory-Python/Readme.md](PowerFactory-Python/Readme.md) — setup, DLL configuration, and usage for the PowerFactory bridge.
+
+---
 
 ## Citation
 
-If you use the RL contribution, cite DOI 10.1109/KPEC58008.2023.10215460.
-
-Metadata is available in Citation.cff.
+Peykarporsan, R. — DOI: 10.1109/KPEC58008.2023.10215460  
+Full metadata: [Citation.cff](Citation.cff)
 
 ## Author
 

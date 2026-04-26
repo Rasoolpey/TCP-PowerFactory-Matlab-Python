@@ -2,8 +2,6 @@
 
 A research framework that trains a Deep Deterministic Policy Gradient (DDPG) agent in **Python/PyTorch** to regulate the output voltage of a **Buck DC-DC converter** simulated in **MATLAB/Simulink**. Multiple Simulink instances run in parallel and stream state to the agent over TCP, dramatically accelerating experience collection.
 
-[![DOI](https://img.shields.io/badge/DOI-10.1109%2FKPEC58008.2023.10215460-blue)](https://doi.org/10.1109/KPEC58008.2023.10215460)
-
 ---
 
 ## Overview
@@ -124,12 +122,6 @@ Each batch saves a two-panel SVG plot of the best episode:
 - **Bottom** – per-step composite reward.
 
 ## Citation
-
-If you use this code, please cite:
-
-```
-Peykarporsan, R. — 10.1109/KPEC58008.2023.10215460
-```
 
 See [Citation.cff](Citation.cff) for full metadata.
 
